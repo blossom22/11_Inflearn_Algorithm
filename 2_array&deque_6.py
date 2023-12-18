@@ -1,23 +1,14 @@
 # 배열 & 연결리스트 & 데크
 # 문제6 _두 수의 합
 def solution(nums, target):
-    answer = [0] * 2
     nums.sort()
-    i,j = 0,1
-    while True:
-        a = nums[i]
-        b = nums[j]
-        if a+b == target:
-            answer[0]=a
-            answer[1]=b
-            return answer
-        elif a+b < target:
-            j+=1
-        else:
-            i+=1
-            j=i+1
-        if i==len(nums)-1:
-            return [0,0]
+    answer = [0]*2
+    n = len(nums)
+    for i in range(n-1):
+        for j in range(i+1, n):
+            if nums[i] + nums[j] == target:
+                answer = [nums[i], nums[j]]
+    return answer
 
 print(solution([7, 9, 2, 13, 3, 15, 8, 11], 12))
 print(solution([21, 12, 30, 15, 6, 2, 9, 19, 14], 24))
