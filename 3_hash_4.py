@@ -26,7 +26,7 @@ from collections import Counter
 def solution(s):
     answer = False
     n = Counter(s)
-    odd = 0
+    odd = 0     # 빈도수가 홀수인 경우는 1번만 있거나 아예 없어야 팰린드롬이 만들어질 수 있다. 
     for key in n:
         if n[key]%2==1:
             odd+=1
