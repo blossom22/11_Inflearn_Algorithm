@@ -14,7 +14,7 @@ def solution(nums):
             left = mid + 1
         else:
             right = mid - 1
-    return -1 if right==len(nums) else right    
+    return -1
 
 print(solution([-3, -2, 0, 1, 3, 5, 8, 9, 12]))
 print(solution([-10, -5, -2, 3, 4, 6, 7, 8]))
