@@ -5,7 +5,7 @@ def solution(nums):
     stack = []
     for i in nums:
         # stack에 최소한 2개이상의 자료가 있어야하고, stack[-1]=2, stack[-2]=1이어야 샌드위치 만들지
-        if len(stack)>1 and stack[-2]==i and stack[-1]==2:
+        if len(stack)>1 and stack[-2]==1 and stack[-1]==2 and i==1:
             answer+=1
             stack.pop()
             stack.pop()
